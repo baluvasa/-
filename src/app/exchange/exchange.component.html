@@ -1,0 +1,28 @@
+<table class="table table-striped table-dark table-hover">
+    <thead>
+       <tr><th>id</th>
+        <th>name</th>
+        <th>mic</th>
+        <th>acronym</th>
+        <th>city</th>
+        <th>country</th>
+        <th>countryCode</th>
+        <th>website</th>
+        <th>firstStockPriceDate</th>
+        <th>lastStockPriceDate</th></tr>
+    </thead>
+    <tbody>
+       <tr *ngFor="let exchange of exchanges">
+        <td>{{exchange.newId}}</td>
+        <td>{{exchange.name}}</td>
+        <td>{{exchange.mic}}</td>
+        <td>{{exchange.acronym}}</td>
+        <td>{{exchange.city}}</td>
+        <td>{{exchange.country}}</td>
+        <td>{{exchange.countryCode}}</td>
+        <td>{{exchange.website}}</td>
+        <td>{{exchange.firstStockPriceDate}}</td>
+        <td>{{exchange.lastStockPriceDate}}</td>       </tr>
+    </tbody>
+ </table>
+

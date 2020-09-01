@@ -1,0 +1,60 @@
+<form [formGroup]="questionForm" (ngSubmit)="onSubmit(questionForm)">
+    <div class="form-row">
+        <div class="form-group col-5">
+            <label>Question Title</label>
+            <textarea formControlName="questiontitle" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.questiontitle.errors }" >
+                </textarea>
+            <div *ngIf="submitted && f.questiontitle.errors" class="invalid-feedback">
+                <div *ngIf="f.questiontitle.errors.required">Question Title is required</div>
+            </div>
+        </div>
+        <div class="form-group col-5">
+            <label>Question Summary</label>
+            <textarea formControlName="questionsummary" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.questionsummary.errors }" >
+                </textarea>
+            <div *ngIf="submitted && f.questionsummary.errors" class="invalid-feedback">
+                <div *ngIf="f.questionsummary.errors.required">Question Summary is required</div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+        <button class="btn btn-primary mr-1">Save</button>
+        <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+    </div>
+</form>
+<div class="container">
+    <div class="col-md-12" *ngFor='let question of questions'>
+        <div class="media text-muted pt-3">
+            <img src='../../assets/profile.png' alt="profile img">
+            <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+              <strong class="d-block text-gray-dark">{{question.questionPostedby}}<span class="postedtime"> ( {{question.timedifference}} )</span></strong>
+              <div> <b>{{question.questionTitle}} ?</b></div>
+              {{question.questionSummary}}<br>
+              <p class="keywords"><b>Keywords:</b> {{question.questionKeywords}}</p>
+              <p class="keywords" *ngIf='question.replycount > 0'><b>Replies:</b> {{question.replycount}}</p>
+              <textarea  class="form-control" (click)="sendqid(question.id)" (blur)="sendreply($event.target.value)"  ></textarea>
+              <div *ngIf='question.reply.length > 0'>
+                  <div *ngFor='let rep of question.reply'>
+                      <div class="media text-muted pt-3">
+                          <img src='../../assets/profile.png' alt="profile img">
+                          <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">{{rep.questionReplydby}}<span class="postedtime"> ( {{rep.timedifference}} )</span></strong>
+                              {{rep.questionReplySummary}}<br>
+                              <div>
+                                  <div class="helpful">
+                                    <!-- <span *ngIf='rep.questionHelpful === "0"'>
+                                        <i class="glyphicon glyphicon-thumbs-up" ></i> 
+                                    </span>   -->                                    
+                                        <i class="glyphicon glyphicon-thumbs-up bg-primary text-white"
+                                        [ngClass]="{'bg-primary' : rep.questionHelpful !== '0'}" (click)="changehelpful(rep)"></i>                                    
+                                      Helpful</div>
+                                  <div  class="comment"><i class="glyphicon glyphicon-comment" ></i> Comment</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+<div class="panel panel-default" *ngFor='let news of Newses'>
+    <div class="panel-heading">{{news.title}}-<span class="label label-info">{{news.publication_date | date:"dd/MM/yyyy"}}</span></div>
+    <div class="panel-body">{{news.summary}}
+        <p><a href={{news.url}} target="_blank">{{news.title}}</a></p>
+    </div>
+  </div>

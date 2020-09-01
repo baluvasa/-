@@ -1,0 +1,103 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class = "panel panel-default">
+            <!-- <div class = "panel-heading">
+               Companies
+            </div> -->
+            <div class = "panel-body" *ngIf='comapniesshow'>
+               <table class="table table-bordered table-striped table-dark table-hover">
+                  <thead>
+                     <tr><th>Ticker</th><th>Company Name</th></tr>
+                  </thead>
+                  <tbody>
+                     <tr *ngFor="let companie of companies" (click)='selectedticker(companie)'>
+                        <td>{{companie.ticker}}</td>
+                        <td>{{companie.name}}</td>
+                     </tr>
+                  </tbody>
+               </table>
+               <!-- <ul class='list-group'>
+                  <li class='list-group-item list-group-item-action list-group-item-info' *ngFor='let skilslist of skilslists' (click)='selectskil(skilslist.id)'>{{skilslist.description}}</li> 
+               </ul> -->
+            </div>
+            <div *ngIf='!comapniesshow'>
+               <span *ngIf = 'selectedcompanyinfo'>
+                  <b>{{selectedcompanyinfo.legal_name}}-<span class="label label-info"> {{selectedcompanyinfo.ticker}} 
+                     </span></b>
+                  <p>
+                     <span *ngIf='showshort'>{{selectedcompanyinfo.short_description}}    <a href="javascript:void(0)" (click)='longdescription()'>More...</a>
+                     </span>
+                     <span *ngIf='!showshort && selectedcompanyinfo'>{{selectedcompanyinfo.long_description}}</span></p>
+                  </span>
+                  <table class="table table-bordered">
+                     <tr><td>id</td><td>{{selectedcompanyinfo.id}}</td></tr>
+                     <tr><td>ticker</td><td>{{selectedcompanyinfo.ticker}}</td></tr>
+                     <tr><td>name</td><td>{{selectedcompanyinfo.name}}</td></tr>
+                     <tr><td>lei</td><td>{{selectedcompanyinfo.lei}}</td></tr>
+                     <tr><td>legal_name</td><td>{{selectedcompanyinfo.legal_name}}</td></tr>
+                     <tr><td>stock_exchange</td><td>{{selectedcompanyinfo.stock_exchange}}</td></tr>
+                     <tr><td>sic</td><td>{{selectedcompanyinfo.sic}}</td></tr>
+                     <tr><td>ceo</td><td>{{selectedcompanyinfo.ceo}}</td></tr>
+                     <tr><td>company_url</td><td>{{selectedcompanyinfo.company_url}}</td></tr>
+                     <tr><td>business_address</td><td>{{selectedcompanyinfo.business_address}}</td></tr>
+                     <tr><td>mailing_address</td><td>{{selectedcompanyinfo.mailing_address}}</td></tr>
+                     <tr><td>business_phone_no</td><td>{{selectedcompanyinfo.business_phone_no}}</td></tr>
+                     <tr><td>hq_address1</td><td>{{selectedcompanyinfo.hq_address1}}</td></tr>
+                     <tr><td>hq_address2</td><td>{{selectedcompanyinfo.hq_address2}}</td></tr>
+                     <tr><td>hq_address_city</td><td>{{selectedcompanyinfo.hq_address_city}}</td></tr>
+                     <tr><td>hq_address_postal_code</td><td>{{selectedcompanyinfo.hq_address_postal_code}}</td></tr>
+                     <tr><td>entity_legal_form</td><td>{{selectedcompanyinfo.entity_legal_form}}</td></tr>
+                     <tr><td>cik</td><td>{{selectedcompanyinfo.cik}}</td></tr>
+                     <tr><td>latest_filing_date</td><td>{{selectedcompanyinfo.latest_filing_date}}</td></tr>
+                     <tr><td>hq_state</td><td>{{selectedcompanyinfo.hq_state}}</td></tr>
+                     <tr><td>hq_country</td><td>{{selectedcompanyinfo.hq_country}}</td></tr>
+                     <tr><td>inc_state</td><td>{{selectedcompanyinfo.inc_state}}</td></tr>
+                     <tr><td>inc_country</td><td>{{selectedcompanyinfo.inc_country}}</td></tr>
+                     <tr><td>employees</td><td>{{selectedcompanyinfo.employees}}</td></tr>
+                     <tr><td>entity_status</td><td>{{selectedcompanyinfo.entity_status}}</td></tr>
+                     <tr><td>sector</td><td>{{selectedcompanyinfo.sector}}</td></tr>
+                     <tr><td>industry_category</td><td>{{selectedcompanyinfo.industry_category}}</td></tr>
+                     <tr><td>industry_group</td><td>{{selectedcompanyinfo.industry_group}}</td></tr>
+                     <tr><td>template</td><td>{{selectedcompanyinfo.template}}</td></tr>
+                     <tr><td>standardized_active</td><td>{{selectedcompanyinfo.standardized_active}}</td></tr>
+                     <tr><td>first_fundamental_date</td><td>{{selectedcompanyinfo.first_fundamental_date}}</td></tr>
+                     <tr><td>last_fundamental_date</td><td>{{selectedcompanyinfo.last_fundamental_date}}</td></tr>
+                     <tr><td>first_stock_price_date</td><td>{{selectedcompanyinfo.first_stock_price_date}}</td></tr>
+                     <tr><td>last_stock_price_date</td><td>{{selectedcompanyinfo.last_stock_price_date}}</td></tr>
+                     
+                  </table>
+                  <a href="javascript:void(0)" (click)="reloadCompanies()">Reload Compines</a><br>
+                  <button (click)='priceinfo(selectedcompanyinfo.ticker)' class="btn btn-info btn-sm">Price Information</button><br>
+				  <div class='container'>
+                     <table class="table table-striped table-dark table-hover" *ngIf='showprice'>
+                        <thead>
+                           <tr><th>date</th>
+                              <th>adj_close</th><th>adj_factor</th><th>adj_high</th><th>adj_low</th><th>adj_open</th><th>adj_volume</th><th>close</th><th>ex_dividend</th><th>high</th><th>low</th><th>open</th><th>split_ratio</th><th>volume</th>
+                           </tr>                           
+                        </thead>
+                        <tbody>
+                           <tr *ngFor='let price of prices'>
+                              <td>{{price.date | date:"dd/MM/yyyy"}}</td>
+                              <td>{{price.adj_close| number: '1.2-4'}}</td>
+<td>{{price.adj_factor| number: '1.2-4'}}</td>
+<td>{{price.adj_high| number: '1.2-4'}}</td>
+<td>{{price.adj_low| number: '1.2-4'}}</td>
+<td>{{price.adj_open| number: '1.2-4'}}</td>
+<td>{{price.adj_volume}}</td>
+<td>{{price.close}}</td>
+<td>{{price.ex_dividend}}</td>
+<td>{{price.high}}</td>
+<td>{{price.low}}</td>
+<td>{{price.open}}</td>
+<td>{{price.split_ratio}}</td>
+<td>{{price.volume}}</td>
+                           </tr>
+                        </tbody>
+                  </table>
+				  </div>
+               </div>
+               <div>
+            </div>
+         </div>
+    </div>
+</div>
