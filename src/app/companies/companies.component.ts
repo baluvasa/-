@@ -9,7 +9,6 @@ import { DataserviceService} from '../dataservice.service';
 export class CompaniesComponent implements OnInit {
   companies:any;
   response:any;
-  responseinfo:any;
   prices:any;
   selectedcompanyinfo:any;
   selectedcompany = '';
@@ -24,10 +23,9 @@ export class CompaniesComponent implements OnInit {
   getdata(){
     this.data.getCompanies().subscribe((res)=>{
       this.response = res;
-      if (this.response.companyDetails.length > 0)
+      if (this.response.companies.length > 0)
       {
-        this.companies = this.response.companyDetails;
-
+        this.companies = this.response.companies;
       }
       else
       {
@@ -41,7 +39,7 @@ export class CompaniesComponent implements OnInit {
         this.data.getSelectedCompanieInfo(this.selectedcompany).subscribe((res)=>
         {
     this.response = res;
-    this.selectedcompanyinfo  = this.response.companyDetails;
+    this.selectedcompanyinfo  = this.response;
     this.showshort = true;
         })
       }
@@ -56,7 +54,7 @@ export class CompaniesComponent implements OnInit {
         this.data.getPrice(ticker).subscribe((res)=>{
           this.showprice =true;
           this.response = res;
-          this.prices = this.response;
+          this.prices = this.response.data;
         }
         );
       }

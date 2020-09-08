@@ -16,7 +16,7 @@ Newses:any;
 getNews(){
 this.data.getNews().subscribe((res)=>{
   this.res = res;
-  this.Newses = this.res.newsDetails;
+  this.Newses = this.res.news;
 })
 }
 }

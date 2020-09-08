@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+<body>
+	<nav class="navbar navbar-inverse" style="border:none;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="./header">StockJabber</a>
+    </div>
+
+<div class="collapse navbar-collapse" id="myNavbar">
+   
+    
+    <ul class="nav navbar-nav navbar-right social" style="margin-right:90px;">
+      <li style="margin-right:40px; margin-top:8px;" class=""><p>
+        <a href="#" class="fa fa-facebook" style="margin-right:-10px;"></a>
+             <a href="#" class="fa fa-twitter" style="margin-right:-10px;"></a>
+             <a href="#" class="fa fa-google" style="margin-right:-10px;"></a>
+             <a href="#" class="fa fa-linkedin" style="margin-right:-10px;"></a>
+      </p></li>
+      <li class=""><a href="#" class="nav-item nav-item1">Stocks</a></li>
+      <li class=""><a href="#" class="nav-item nav-item1">Groups</a></li>
+      <li class=""><a href="javascript:void(0)" class="nav-item">Profile</a>
+      </li>
+
+       <!--<li data-toggle="modal" data-target="#myModal1" class=""><a href="javascript:void(0)" class="nav-item">SignIn</a>
+      </li>-->
+      
+    </ul>
+  </div>
+</div>
+</nav>
+
+<nav class="navbar navbar-inverse nav-sec">
+  <div class="container-fluid"> 
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar1">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     
+</div>
+
+<div class="collapse navbar-collapse" id="myNavbar1">
+    <ul class="nav navbar-nav nav-4">
+      <li><a href="" class="nav-item nav-t">Buy/Sell</a></li>
+      <li><a href="#" class="nav-item nav-t">About Us</a></li>
+      <li><a href="#" class="nav-item nav-t">IPO Analysis</a></li>
+      <li><a href="#" class="nav-item nav-t">Opinion</a></li>
+      <li><a href="#" class="nav-item nav-t">Videos</a></li>
+      <li><a href="#" class="nav-item nav-t">Best Providers</a></li>
+    </ul>
+
+    <form class="navbar-form navbar-left" style="margin-left:180px;">
+      <div class="form-group in-fr">
+        <input type="text" class="form-control" placeholder="Search Stock (TSLA)">
+      </div>
+      
+    </form>
+
+</div>
+</div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <h4 class="trend-head-news">News Impacting Today's Market</h4>
+
+      <div class="row">
+        <div class="col-md-10 col-sm-12 col-xs-12">
+           <div id="myCarousel" class="carousel slide" style="max-width: 900px; margin: 0px auto;" data-interval="5000" data-ride="carousel">
+            <ol class="carousel-indicators hidden-xs hidden-sm" style="padding-bottom:50px;">
+                <li data-target="#carcousel-example-generic" data-slide-to="0" class="active" style="display: inline-block;width:5px;
+                height:5px;background-color:rgba(0,0,0,1.5);border:1px solid black;border-radius:5px;"></li>
+                <li data-target="#carcousel-example-generic" data-slide-to="1" style="display: inline-block;width:5px;
+                height:5px;background-color:rgba(0,0,0,1.5);border:1px solid black;border-radius:5px;"></li>
+                <li data-target="#carcousel-example-generic" data-slide-to="2" style="display: inline-block;width:5px;
+                height:5px;background-color:rgba(0,0,0,1.5);border:1px solid black;border-radius:5px;"></li>
+            </ol>
+            <div class="carousel-inner" style="margin-right:40px;">
+                <div class="active item">
+               <div class="">
+                 <img src="assets/images/copo.jpg" class="img-responsive" style="height:180px;width:340px;">
+               </div>
+              <blockquote style="border-left: 0px solid #eee;">
+                <p style="color: #ffffff;font-size:12px;font-family:'Tahoma',sans-serif;margin-left:-20px;font-weight:bold;">
+                Warren Buffet Said Economy will recover,nothing can stop running America</p>
+                <p style="color: #ffffff;font-size:12px;font-family:'Tahoma',sans-serif;margin-left:-20px;margin-top:-6px;font-weight:bold;">
+                Bill Gates is leaving Microsoft Board</p>
+              </blockquote>
+             
+            </div>
+
+            <div class="item">
+              <div>
+                <img src="assets/images/e_18.jpg" class="img-responsive" style="height:180px;width:340px;">
+              </div>
+
+              <blockquote style="border-left: 0px solid #eee;">
+              <p style="color: #ffffff;font-size:12px;font-family:'Tahoma',sans-serif;margin-left:-20px;font-weight:bold;">Warren Buffet Said Economy will recover,nothing can stop running America</p>
+               <p style="color: #ffffff;font-size:12px;font-family:'Tahoma',sans-serif;margin-left:-20px;margin-top:-6px;font-weight:bold;">Bill Gates is leaving Microsoft Board</p>
+              </blockquote>
+              
+            </div>
+            <div class="item">
+               <div>
+                 <img src="assets/images/hos.jpg" class="img-responsive" style="height:180px;width:340px;">
+               </div>
+              <blockquote style="border-left: 0px solid #eee;">
+                <p style="color: #ffffff;font-size:12px;font-family:'Tahoma',sans-serif;margin-left:-20px;font-weight:bold;">Warren Buffet Said Economy will recover,nothing can stop running America</p>
+                <p style="color: #ffffff;font-size:12px;font-family:'Tahoma',sans-serif;margin-left:-20px;margin-top:-6px;font-weight:bold;">Bill Gates is leaving Microsoft Board</p>
+              </blockquote>
+             
+            </div>
+                  
+            </div>
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+        </div> 
+        </div>
+      </div>
+      <h4 style="color:#ffffff;font-weight:bold;">Trending</h4>
+      <table style="border:1px; width:95%;"><thead>
+          <tr class="para-text-2" style="line-height:20px;"><th style="color:#ffcc00;font-weight:bold;
+        ">Ticker</th>
+            <th style="color:#ffcc00;font-weight:bold;">CurrPrice</th>
+           <th style="color:#ffcc00;font-weight:bold;">52Wklow</th>
+           <th style="color:#ffcc00;font-weight:bold;">52WkHigh</th> 
+           </tr></thead>
+           <tbody>
+
+            <tr class="para-text-3"><td style="color:#ffffff;font-weight:bold;line-height:25px;">MU</td> 
+              <td style="color:#ffffff;font-weight:bold;">315.41</td>
+              <td style="color:#ffffff;font-weight:bold;">302.90</td> 
+              <td style="color:#ffffff;font-weight:bold;">610.67</td> 
+              
+            </tr>
+
+            <tr class="para-text-3"><td style="color:#ffffff;font-weight:bold;line-height:25px;">CRM</td> 
+              <td style="color:#ffffff;font-weight:bold;">141.68</td>
+              <td style="color:#ffffff;font-weight:bold;">612.5</td> 
+              <td style="color:#ffffff;font-weight:bold;">314.90</td></tr>
+
+            <tr class="para-text-3"><td style="color:#ffffff;font-weight:bold;line-height:25px;">MFST</td> 
+            <td style="color:#ffffff;font-weight:bold;">506.90</td> 
+              <td style="color:#ffffff;font-weight:bold;">893.0</td> 
+              <td style="color:#ffffff;font-weight:bold;">221.70</td>
+              </tr>
+
+            <tr class="para-text-3"><td style="color:#ffffff;font-weight:bold;line-height:25px;">APL</td>
+             <td style="color:#ffffff;font-weight:bold;">617.90</td> 
+             <td style="color:#ffffff;font-weight:bold;">216.20</td> 
+             <td style="color:#ffffff;font-weight:bold;">345.89</td>
+             </tr>
+
+            <tr class="para-text-3"><td style="color:#ffffff;font-weight:bold;line-height:25px;">DIS</td> 
+              <td style="color:#ffffff;font-weight:bold;">452.89</td>
+              <td style="color:#ffffff;font-weight:bold;">122.56</td> 
+              <td style="color:#ffffff;font-weight:bold;">552.80</td> 
+              </tr></tbody>
+              
+          </table>
+    </div>
+
+    <div class="col-md-6 col-sm-12 col-xs-12" style="margin-left:-40px;">
+        
+  
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+          <ul class="nav nav-pills nav-fill navtop">
+        <li class="nav-item">
+            <a class="nav-link active" href="#" data-toggle="tab" style="margin-left:0px;color:#000000;"><i class="fa fa-microphone" style="font-size:24px;margin-top:-25px;"href=""></i>&nbsp;Talk</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" data-toggle="tab" style="color:#000000;"><i class="fa fa-eye" style="font-size:24px;margin-top:-25px;" href=""></i>&nbsp;&nbsp;Watchlist</a>
+        </li>
+        </ul>
+          </div>
+          </div>
+          
+      <!--<p style="display:flex;background-color:#ffffff;color:#000000;font-weight:bold;width:550px;">
+      <span style="margin-left:20px;"><img src="images/67.jpg" class="img-responsive"></span>&nbsp;<span>Talk</span>
+      <span style="margin-left:180px;"><img src="images/mon.png" class="img-responsive"></span>&nbsp;
+      <span>Watchlist</span></p><br>-->
+
+      <div class="row" style="margin-top:10px;">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+      <input type ="text" style="width:580px;background-color:#ffffff;color:#000000;font-weight:bold;height:50px;"
+      placeholder="Type @ before ticker and post here to get opinion and recommendation.(Ex:@TSLA)" class="bottom">
+      </div> 
+      </div>
+    
+
+      <div class="row" style="margin-top:8px;">
+      <div class="col-md-10 col-sm-6 col-xs-12">
+      <p style="display:flex;"><span><button type="submit" class="btn btn-default" style="padding:2px 3px;">Prediction</button></span>
+        <span style="margin-left:20px;"><a href=""><i style="font-size:24px;color:#00b300;margin-top:-1px;background-color:#ffffff;padding:2px 3px;border-radius:0%;" class="fa">&#xf062;</i></a></span>
+        <span style="margin-left:10px;"><a href=""><i style="font-size:24px;color:red;margin-top:-1px;background-color:#ffffff;padding:2px 3px;border-radius:0%;" class="fa">&#xf063;</i></a></span>
+        <span style="margin-left:20px;"><button type="submit" class="btn btn-default" style="padding:2px 5px;">Impact</button>
+          </span><span style="color:#ffffff;font-weight:bold;margin-left:20px;"><a href="" style="color:#ffffff;">Short</a></span>
+          <span style="color:#ffffff;font-weight:bold;margin-left:20px;"><a href="" style="color:#ffffff;">Long</a></span>
+           <span><button type="submit" class="btn btn-default" style="padding:2px 4px;margin-left:160px;">Post</button>
+          </span></p>
+        </div>
+        
+
+     </div>
+
+     <div class="row" style="margin-top:40px;">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="row">
+          <div class="col-md-5 col-sm-12 col-xs-12" style="margin-bottom:-10px;">
+        <p><span style="color:#ffffff;font-weight:bold;">Sam</span><br>
+        <span style="color:#ffffff;font-weight:bold;margin-top:-5px;">2nd May 2020,4:05 PM</span></p>
+      </div>
+      
+        <div class="col-md-4 col-sm-12 col-xs-12">
+        <p style="display:flex;"><span style="margin-left:50px;color:#ffffff;font-weight:bold;">Short</span>
+          <span style="margin-left:10px;font-weight:bold;">
+              <i style="font-size:24px;color:red;margin-top:-8px;background-color:#ffffff;padding:2px 3px;border-radius:0%;" class="fa">&#xf063;</i>
+         </span>
+          <span style="margin-left:40px;color:#ff8533;font-weight:bold;">MU</span></p>
+        </div>
+       </div>
+     
+<p style="color:#ffffff;font-weight:bold;margin-top:px;">Just Bought MU Stock for $44.This is good for long term,when market come back this<br> will touch $100.</p>
+    
+        
+               <div class="row">
+        <div class="col-md-3 col-sm-12 col-xs-12">
+      <p><a href="" style="text-decoration:none;color:#ffffff;font-weight:bold;"><img src="assets/images/up.jpg">&nbsp;                  
+        <span style="color:#ffffff;font-family:'Tahoma', sans-serif;font-weight:bold;">Recommend</span><br>
+                  <span style="margin-left:25px;" class="badge">232</span>
+                  </a></p>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                  <a href="" style="text-decoration:none;color:#ffffff;"><img src="assets/images/dow2.jpg">&nbsp;
+                    <span style="color:#ffffff;font-family:'Tahoma',sans-serif;font-weight:bold;">Don't Recommend</span><br>
+                    <span style="margin-left:37px;" class="badge">231</span>
+                    </a>
+                  </div>
+                  
+             <div class="col-md-3 col-sm-12 col-xs-12">
+                  <a href="" style="text-decoration:none;">
+                    <img src="assets/images/chat1.png">&nbsp;
+                    <span style="color:#ffffff;font-family:'Tahoma', sans-serif;font-weight:bold;">Comment</span><br>
+                   <span style="margin-left:37px;" class="badge">123</span>
+                  </a>
+                
+              </div>
+            </div><br>
+
+            <p class="reply-1"><span style="margin-left:30px; font-weight:bold;font-family:'Tahoma', sans-serif;color:#ffffff;">Frank</span><br>
+            <span style="margin-left:30px;font-family:'Tahoma', sans-serif;color:#ffffff;">04/21/2020 3:05 PM</span>
+          </p>
+          <p style="margin-left:30px;font-family:'Tahoma', sans-serif;color:#ffffff;">I suggest you to replace MU with another non tech stock as you already have NVDA,<br>Microsoft,CRM in your portfolio which will over weign the tech portfolio</p><br>
+
+          <div class="row" style="margin-left:20px;margin-top:-18px;">
+            <div class="col-md-5 col-sm-6 col-xs-12">
+           <p class="reply-1"><span><img src="assets/images/up.jpg" style="margin-top:8px;"></span>&nbsp;
+            <span style=" font-weight:bold;font-family:'Tahoma', sans-serif;color:#ffffff;">Like</span>
+            <br>
+            <span style="margin-left:30px;margin-top:-5px;" class="badge">32</span>
+          </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <p class="reply-1"><span><img src="assets/images/cht.png" style="margin-top:8px;"></span>&nbsp;
+              <span style=" font-weight:bold;font-family:'Tahoma', sans-serif;color:#ffffff;">Comment</span>
+            <br>
+            <span style="margin-left:40px;margin-top:-5px;" class="badge">456</span>
+          </p>
+          </div>
+          </div>
+                
+                </div>
+            </div>
+<hr class ="hor-line">
+            <!--Long section -->
+            <div class="row" style="margin-top:30px;">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="row">
+          <div class="col-md-5 col-sm-12 col-xs-12" style="margin-bottom:-10px;">
+        <p><span style="color:#ffffff;font-weight:bold;">Sam</span><br>
+        <span style="color:#ffffff;font-weight:bold;margin-top:-5px;">2nd May 2020,4:05 PM</span></p>
+      </div>
+      
+        <div class="col-md-4 col-sm-12 col-xs-12">
+        <p style="display:flex;"><span style="margin-left:50px;color:#ffffff;font-weight:bold;">Long</span>
+          <span style="margin-left:10px;">
+          <i style="font-size:24px;color:#00b300;margin-top:-7px;background-color:#ffffff;padding:2px 3px;border-radius:0%;" class="fa">&#xf062;</i></span>
+          <span style="margin-left:40px;color:#33ff33;font-weight:bold;">TSLA</span></p>
+        </div>
+      </div>
+
+    <p style="color:#ffffff;font-weight:bold;">Just Bought MU Stock for $44.This is good for long term,when market come back this<br> will touch $100.</p>
+          
+               <div class="row">
+        <div class="col-md-3 col-sm-12 col-xs-12">
+      <p><a href="" style="text-decoration:none;color:#ffffff;font-weight:bold;"><img src="assets/images/up.jpg">&nbsp;
+                  <span style="color:#ffffff;font-family:'Tahoma', sans-serif;font-weight:bold;">Recommend</span><br>
+                  <span style="margin-left:25px;" class="badge">232</span>
+                  </a></p>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                  <a href="" style="text-decoration:none;"><img src="assets/images/dow2.jpg">&nbsp;
+                    <span style="color:#ffffff;font-family:'Tahoma',sans-serif;font-weight:bold;">Don't Recommend</span><br>
+                    <span style="margin-left:37px;" class="badge">231</span>
+                    </a>
+                  </div>
+                  
+             <div class="col-md-3 col-sm-12 col-xs-12">
+                  <a href="" style="text-decoration:none;">
+                    <img src="assets/images/chat1.png">&nbsp;
+                    <span style="color:#ffffff;font-family:'Tahoma', sans-serif;font-weight:bold;">Comment</span><br>
+                   <span style="margin-left:37px;" class="badge">132</span>
+                  </a>
+                
+              </div>
+            </div><br>
+
+             <p class="reply-1"><span style="margin-left:30px; font-weight:bold;font-family:'Tahoma', sans-serif;color:#ffffff;">Frank</span><br>
+            <span style="margin-left:30px;font-family:'Tahoma', sans-serif;color:#ffffff;">04/21/2020 3:05 PM</span>
+          </p>
+          <p style="margin-left:30px;font-family:'Tahoma', sans-serif;color:#ffffff;">I suggest you to replace MU with another non tech stock as you already have NVDA,<br>Microsoft,CRM in your portfolio which will over weign the tech portfolio</p><br>
+
+          <div class="row" style="margin-left:20px;margin-top:-18px;">
+            <div class="col-md-5 col-sm-6 col-xs-12">
+           <p class="reply-1"><span><img src="assets/images/up.jpg" style="margin-top:8px;"></span>&nbsp;
+            <span style=" font-weight:bold;font-family:'Tahoma', sans-serif;color:#ffffff;">Like</span>
+            <br>
+            <span style="margin-left:30px;margin-top:-5px;" class="badge">32</span>
+          </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <p class="reply-1"><span><img src="assets/images/cht.png" style="margin-top:8px;"></span>&nbsp;
+              <span style=" font-weight:bold;font-family:'Tahoma', sans-serif;color:#ffffff;">Comment</span>
+            <br>
+            <span style="margin-left:39px;margin-top:-5px;" class="badge">456</span>
+          </p>
+          </div>
+          </div>
+</div>
+            </div>
+        </div>
+
+     
+
+  </div>
+  </div>
+</body>

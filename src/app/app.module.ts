@@ -4,36 +4,43 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MyFilterPipe } from './my-filter.pipe';
 import { EventEmitterService } from './event-emitter.service';
-import { HttpModule } from '@angular/http';
+
 import { HttpClientModule } from '@angular/common/http';
 import { NewsComponent } from './news/news.component';
 import { CompaniesComponent } from './companies/companies.component';
-import { UserformComponent } from './userform/userform.component';
-import { CommonWords} from '../assets/commonwords';
+import { HeaderComponent } from './header/header.component';
+import { TopicsComponent } from './topics/topics.component';
+import { EtfSharesComponent }from './etfshares/etfshares.component';
+import { StocksComponent } from './stocks/stocks.component';
+import { ProfileComponent }  from './profile/profile.component';
+import { OriginComponent } from './origin/origin.component';
+import { EtfportfolioComponent } from './etfportfolio/etfportfolio.component';
 
-import { ReactiveFormsModule } from '@angular/forms';
-import { LoaddataComponent } from './loaddata/loaddata.component';
-import { ExchangeComponent } from './exchange/exchange.component';
-import { QuestionComponent } from './question/question.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     MyFilterPipe,
     NewsComponent,
-    CompaniesComponent,
-    UserformComponent,
-    LoaddataComponent,
-    ExchangeComponent,
-    QuestionComponent
+     CompaniesComponent,
+      HeaderComponent,
+      TopicsComponent,
+      EtfSharesComponent,
+      StocksComponent,
+      ProfileComponent,
+      OriginComponent,
+      EtfportfolioComponent
+
+
   ],
   imports: [
     BrowserModule,
-    HttpModule,
+    
     AppRoutingModule,
-    HttpClientModule,
-    ReactiveFormsModule
+    HttpClientModule
   ],
-  providers: [EventEmitterService,CommonWords],
+  providers: [EventEmitterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

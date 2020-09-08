@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-	"aws-deploy":"aws s3 sync dist/task/ s3://baluvasa"
+    "aws-deploy": "aws s3 sync dist/task/ s3://baluvasa"
   },
   "private": true,
   "dependencies": {
